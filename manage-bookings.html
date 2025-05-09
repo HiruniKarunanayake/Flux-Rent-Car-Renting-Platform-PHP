@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Bookings - Admin</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .table thead th {
+            text-align: center;
+        }
+
+        .table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .action-btns .btn {
+            margin-right: 5px;
+        }
+
+        .search-bar {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body style="background-color: #f8f9fa;">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Vehicle Owner Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Manage Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Cars</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container mt-5">
+        <h2 class="mb-4 text-center">Manage Bookings</h2>
+
+        <!-- Search Bar and Add Booking Button -->
+        <div class="search-container">
+            <input type="text" class="form-control search-bar" id="searchInput" placeholder="Search by booking ID or customer name">
+            <button class="btn btn-primary"><i class="fas fa-plus"></i> Add New Booking</button>
+        </div>
+
+        <!-- Bookings Table -->
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>Booking ID</th>
+                    <th>Customer Name</th>
+                    <th>Car</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#12345</td>
+                    <td>John Doe</td>
+                    <td>Mercedes Grand Sedan</td>
+                    <td>2024-10-01</td>
+                    <td>2024-10-05</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12346</td>
+                    <td>Jane Smith</td>
+                    <td>BMW X5</td>
+                    <td>2024-10-07</td>
+                    <td>2024-10-10</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12347</td>
+                    <td>Michael Johnson</td>
+                    <td>Audi Q7</td>
+                    <td>2024-09-15</td>
+                    <td>2024-09-20</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12348</td>
+                    <td>Susan Williams</td>
+                    <td>Toyota Corolla</td>
+                    <td>2024-11-01</td>
+                    <td>2024-11-05</td>
+                    <td><span class="badge bg-danger">Cancelled</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12349</td>
+                    <td>Robert Brown</td>
+                    <td>Honda Civic</td>
+                    <td>2024-08-20</td>
+                    <td>2024-08-25</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12350</td>
+                    <td>Emily Davis</td>
+                    <td>Ford Mustang</td>
+                    <td>2024-12-15</td>
+                    <td>2024-12-20</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12351</td>
+                    <td>David Wilson</td>
+                    <td>Chevrolet Tahoe</td>
+                    <td>2024-07-10</td>
+                    <td>2024-07-15</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12352</td>
+                    <td>Olivia Taylor</td>
+                    <td>Volvo XC90</td>
+                    <td>2024-06-05</td>
+                    <td>2024-06-08</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12353</td>
+                    <td>Lucas Martinez</td>
+                    <td>Porsche 911</td>
+                    <td>2024-09-22</td>
+                    <td>2024-09-25</td>
+                    <td><span class="badge bg-success">Confirmed</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>#12354</td>
+                    <td>Emma Garcia</td>
+                    <td>Jeep Wrangler</td>
+                    <td>2024-05-12</td>
+                    <td>2024-05-18</td>
+                    <td><span class="badge bg-danger">Cancelled</span></td>
+                    <td class="action-btns">
+                        <button class="btn btn-info btn-sm"><i class="fas fa-eye"></i></button>
+                        <button class="btn btn-warning btn-sm"><i class="fas fa-edit"></i></button>
+                        <button class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button>
+                    </td>
+                </tr>
+                
+                <!-- Additional rows for more bookings -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-3">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2024 Flux Rent. All rights reserved.</p>
+            <p>Follow us on:
+                <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+
+    <!-- Search Functionality -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('tbody tr');
+            
+            rows.forEach(row => {
+                const id = row.querySelector('td:nth-child(1)').textContent.toLowerCase();
+                const name = row.querySelector('td:nth-child(2)').textContent.toLowerCase();
+                
+                if (id.includes(filter) || name.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

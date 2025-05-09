@@ -1,0 +1,29 @@
+How to run Project
+1. Download and Unzip the file on your local system copy Uwa .
+2. Put Uwa folder inside root directory (for xampp xampp/htdocs, for wamp wamp/www, for lamp var/www/html)
+
+Database Configuration
+
+Open phpmyadmin
+Create Database fluxrent
+Import database fluxrent.sql (available SQL File Folder inside zip package)
+
+For Users
+Open Your browser put inside browser “http://localhost/Uwa”
+Login Details for vehical owner:
+Username : kasun@gmail.com
+Password: 123456
+
+Login Details for driver:
+Username : anil@gmail.com
+Password: 123456
+
+Login Details for customer:
+Username : hirunihasanka99@gmail.com
+Password: 123456
+
+For Admin Panel
+Open Your browser put inside browser “http://localhost/Uwa/admin-login.php”
+Login Details for admin :
+Username: hiruni@gmail.com
+Password: 123456
