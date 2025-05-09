@@ -19,7 +19,7 @@ Username : anil@gmail.com
 Password: 123456
 
 Login Details for customer:
-Username : hirunihasanka99@gmail.com
+Username : thilini@gmail.com
 Password: 123456
 
 For Admin Panel
